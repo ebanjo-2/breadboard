@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1575113674 source:d:\programmieren\cb workspace\breadboard\src\main.cpp
+	<engine_control.h>
+
+1575113744 d:\programmieren\cb workspace\breadboard\src\engine_control.h
+	<engine.h>
+	<window/graphics_context.h>
+	<window/key_input_watcher.h>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\engine\src\engine.h
+	<window/graphics_context.h>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\graphics_context.h
+	<window/window_lib.h>
+	<window/window.h>
+	<functional>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\window_lib.h
+	<core/shared_lib.h>
+	<core/shared_lib_class.h>
+	<functional>
+	<core/shared_lib_class.h>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\shared_lib.h
+	<string>
+	<iostream>
+	<core/note.h>
+	<dlfcn.h>
+	<windows.h>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\note.h
+	<vector>
+	<string>
+	<core/memory_watcher.h>
+	<sstream>
+	<iostream>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\memory_watcher.h
+	<vector>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\shared_lib_class.h
+	<core/shared_lib.h>
+	<core/shared_lib_class.h>
+	<functional>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\window.h
+	<core/shared_lib.h>
+	<window/window_lib.h>
+	<functional>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\key_input_watcher.h
+	<core/shared_lib_class.h>
+	<window/key_ids.h>
+	<window/window.h>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\key_ids.h
+
+1575113801 source:d:\programmieren\cb workspace\breadboard\src\engine_control.cpp
+	"engine_control.h"
+	<core/core.h>
+
+1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\core.h
+	<core/shared_lib.h>
+	<string>
+

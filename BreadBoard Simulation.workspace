@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="BreadBoard Simulation">
+		<Project filename="BreadBoard.cbp" active="1">
+			<Depends filename="engine/undicht/core/core.cbp" />
+			<Depends filename="engine/undicht/engine/engine.cbp" />
+		</Project>
+		<Project filename="engine/undicht/core/core.cbp">
+		</Project>
+		<Project filename="engine/undicht/core/implementation/graphics/opengl_33/video_opengl_33.cbp">
+			<Depends filename="engine/undicht/core/core.cbp" />
+		</Project>
+		<Project filename="engine/undicht/core/implementation/window/glfw/window_glfw.cbp">
+			<Depends filename="engine/undicht/core/core.cbp" />
+		</Project>
+		<Project filename="engine/undicht/core/implementation/audio/openal/audio_openal.cbp">
+			<Depends filename="engine/undicht/core/core.cbp" />
+		</Project>
+		<Project filename="engine/undicht/engine/engine.cbp">
+			<Depends filename="engine/undicht/core/core.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>
