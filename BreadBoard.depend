@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1575113674 source:d:\programmieren\cb workspace\breadboard\src\main.cpp
+1575201555 source:d:\programmieren\cb workspace\breadboard\src\main.cpp
 	<engine_control.h>
+	<breadboard.h>
+	<components/led.h>
 
-1575113744 d:\programmieren\cb workspace\breadboard\src\engine_control.h
+1575127010 d:\programmieren\cb workspace\breadboard\src\engine_control.h
 	<engine.h>
 	<window/graphics_context.h>
 	<window/key_input_watcher.h>
@@ -55,11 +57,54 @@
 
 1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\key_ids.h
 
-1575113801 source:d:\programmieren\cb workspace\breadboard\src\engine_control.cpp
+1575127009 source:d:\programmieren\cb workspace\breadboard\src\engine_control.cpp
 	"engine_control.h"
 	<core/core.h>
 
 1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\core.h
 	<core/shared_lib.h>
 	<string>
+
+1575197505 source:d:\programmieren\cb workspace\breadboard\src\component.cpp
+	"component.h"
+	<iostream>
+	<contact_strip.h>
+
+1575196755 d:\programmieren\cb workspace\breadboard\src\component.h
+	<vector>
+
+1575196732 source:d:\programmieren\cb workspace\breadboard\src\breadboard.cpp
+	"breadboard.h"
+	<iostream>
+
+1575142222 d:\programmieren\cb workspace\breadboard\src\breadboard.h
+	<component.h>
+	<contact_strip.h>
+
+1575128655 d:\programmieren\cb workspace\breadboard\src\contact_point.h
+
+1575127682 source:d:\programmieren\cb workspace\breadboard\src\contact_point.cpp
+	"contact_point.h"
+
+1575196722 d:\programmieren\cb workspace\breadboard\src\contact_strip.h
+	<vector>
+
+1575197623 source:d:\programmieren\cb workspace\breadboard\src\contact_strip.cpp
+	"contact_strip.h"
+	<component.h>
+	<iostream>
+
+1575201299 source:d:\programmieren\cb workspace\breadboard\src\components\led.cpp
+	"led.h"
+	<iostream>
+
+1575197114 d:\programmieren\cb workspace\breadboard\src\components\led.h
+	<component.h>
+	<components/pin_status.h>
+
+1575196645 source:d:\programmieren\cb workspace\breadboard\src\components\pin_status.cpp
+	"pin_status.h"
+
+1575196645 d:\programmieren\cb workspace\breadboard\src\components\pin_status.h
+	<vector>
 

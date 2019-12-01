@@ -95,6 +95,18 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Unit filename="src/breadboard.cpp" />
+		<Unit filename="src/breadboard.h" />
+		<Unit filename="src/component.cpp" />
+		<Unit filename="src/component.h" />
+		<Unit filename="src/components/led.cpp" />
+		<Unit filename="src/components/led.h" />
+		<Unit filename="src/components/pin_status.cpp" />
+		<Unit filename="src/components/pin_status.h" />
+		<Unit filename="src/contact_strip.cpp" />
+		<Unit filename="src/contact_strip.h" />
+		<Unit filename="src/engine_control.cpp" />
+		<Unit filename="src/engine_control.h" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
