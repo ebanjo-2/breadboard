@@ -11,7 +11,7 @@ using namespace undicht::window;
 namespace bread {
 
     // linux
-    #ifdef UND_LINUX
+    #ifdef UND_UNIX
         std::string window_lib = "engine/undicht/core/implementation/window/glfw/libwindow_glfw.so";
         std::string graphics_lib = "engine/undicht/core/implementation/graphics/opengl_33/libvideo_opengl_33.so";
         std::string audio_lib = "engine/undicht/core/implementation/audio/openal/libaudio_openal.so";

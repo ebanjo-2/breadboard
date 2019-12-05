@@ -1,110 +1,421 @@
 # depslib dependency file v1.0
-1575201555 source:d:\programmieren\cb workspace\breadboard\src\main.cpp
-	<engine_control.h>
-	<breadboard.h>
-	<components/led.h>
+1575310970 source:/home/eike/Desktop/Programmieren/breadboard/src/breadboard.cpp
+	"breadboard.h"
+	<iostream>
 
-1575127010 d:\programmieren\cb workspace\breadboard\src\engine_control.h
+1575573115 /home/eike/Desktop/Programmieren/breadboard/src/breadboard.h
+	<component.h>
+	<contact_strip.h>
+
+1575310970 /home/eike/Desktop/Programmieren/breadboard/src/component.h
+	<vector>
+
+1575310970 /home/eike/Desktop/Programmieren/breadboard/src/contact_strip.h
+	<vector>
+
+1575310970 source:/home/eike/Desktop/Programmieren/breadboard/src/component.cpp
+	"component.h"
+	<iostream>
+	<contact_strip.h>
+
+1575310970 source:/home/eike/Desktop/Programmieren/breadboard/src/components/led.cpp
+	"led.h"
+	<iostream>
+
+1575310970 /home/eike/Desktop/Programmieren/breadboard/src/components/led.h
+	<component.h>
+	<components/pin_status.h>
+
+1575310970 /home/eike/Desktop/Programmieren/breadboard/src/components/pin_status.h
+	<vector>
+
+1575310970 source:/home/eike/Desktop/Programmieren/breadboard/src/components/pin_status.cpp
+	"pin_status.h"
+
+1575310970 source:/home/eike/Desktop/Programmieren/breadboard/src/contact_strip.cpp
+	"contact_strip.h"
+	<component.h>
+	<iostream>
+
+1575311243 source:/home/eike/Desktop/Programmieren/breadboard/src/engine_control.cpp
+	"engine_control.h"
+	<core/core.h>
+
+1575310970 /home/eike/Desktop/Programmieren/breadboard/src/engine_control.h
 	<engine.h>
 	<window/graphics_context.h>
 	<window/key_input_watcher.h>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\engine\src\engine.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/engine/src/engine.h
 	<window/graphics_context.h>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\graphics_context.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/window/graphics_context.h
 	<window/window_lib.h>
 	<window/window.h>
 	<functional>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\window_lib.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/window/window_lib.h
 	<core/shared_lib.h>
 	<core/shared_lib_class.h>
 	<functional>
 	<core/shared_lib_class.h>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\shared_lib.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/core/shared_lib.h
 	<string>
 	<iostream>
 	<core/note.h>
 	<dlfcn.h>
 	<windows.h>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\note.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/core/note.h
 	<vector>
 	<string>
 	<core/memory_watcher.h>
 	<sstream>
 	<iostream>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\memory_watcher.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/core/memory_watcher.h
 	<vector>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\shared_lib_class.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/core/shared_lib_class.h
 	<core/shared_lib.h>
 	<core/shared_lib_class.h>
 	<functional>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\window.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/window/window.h
 	<core/shared_lib.h>
 	<window/window_lib.h>
 	<functional>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\key_input_watcher.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/window/key_input_watcher.h
 	<core/shared_lib_class.h>
 	<window/key_ids.h>
 	<window/window.h>
 
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\window\key_ids.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/window/key_ids.h
 
-1575127009 source:d:\programmieren\cb workspace\breadboard\src\engine_control.cpp
-	"engine_control.h"
-	<core/core.h>
-
-1575109356 d:\programmieren\cb workspace\breadboard\engine\undicht\core\include\core\core.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/core/core.h
 	<core/shared_lib.h>
 	<string>
 
-1575197505 source:d:\programmieren\cb workspace\breadboard\src\component.cpp
-	"component.h"
-	<iostream>
-	<contact_strip.h>
+1575574697 source:/home/eike/Desktop/Programmieren/breadboard/src/main.cpp
+	<engine_control.h>
+	<breadboard.h>
+	<components/led.h>
+	<rendering/renderer.h>
 
-1575196755 d:\programmieren\cb workspace\breadboard\src\component.h
+1575574834 source:/home/eike/Desktop/Programmieren/breadboard/src/rendering/board_texture.cpp
+	"board_texture.h"
+	<iostream>
+
+1575572829 /home/eike/Desktop/Programmieren/breadboard/src/rendering/board_texture.h
+	<breadboard.h>
+	<rendering/texture_generator.h>
+
+1575571811 source:/home/eike/Desktop/Programmieren/breadboard/src/rendering/texture_generator.cpp
+	"texture_generator.h"
+	<algorithm>
+	<iostream>
+
+1575404124 /home/eike/Desktop/Programmieren/breadboard/src/rendering/texture_generator.h
+	<glm/glm/glm.hpp>
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/glm.hpp
+	"core/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cstdio>
+	"core/setup.hpp"
+	"./core/_detail.hpp"
+	"./core/type.hpp"
+	"./core/func_trigonometric.hpp"
+	"./core/func_exponential.hpp"
+	"./core/func_common.hpp"
+	"./core/func_packing.hpp"
+	"./core/func_geometric.hpp"
+	"./core/func_matrix.hpp"
+	"./core/func_vector_relational.hpp"
+	"./core/func_integer.hpp"
+	"./core/func_noise.hpp"
+	"./core/_swizzle.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/_fixes.hpp
+	<cmath>
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/setup.hpp
+	<immintrin.h>
+	<immintrin.h>
+	<smmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/_detail.hpp
+	"setup.hpp"
+	<cassert>
+	<cstdint>
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type.hpp
+	"type_half.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_gentype.hpp"
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat2x2.hpp"
+	"type_mat2x3.hpp"
+	"type_mat2x4.hpp"
+	"type_mat3x2.hpp"
+	"type_mat3x3.hpp"
+	"type_mat3x4.hpp"
+	"type_mat4x2.hpp"
+	"type_mat4x3.hpp"
+	"type_mat4x4.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_half.hpp
+	<cstdlib>
+	"type_half.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_half.inl
+	"_detail.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_float.hpp
+	"type_half.hpp"
+	"setup.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_int.hpp
+	"setup.hpp"
+	"_detail.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_gentype.hpp
+	"type_size.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_size.hpp
+	<cstdlib>
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec1.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec1.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec.hpp
+	"type_gentype.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/_swizzle.hpp
+	"_swizzle_func.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/_swizzle_func.hpp
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec1.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec2.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec2.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec2.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec3.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec3.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec3.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec4.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec4.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_vec4.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat2x2.hpp
+	"type_mat.hpp"
+	"type_mat2x2.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat.hpp
+	"type_gentype.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat2x2.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat2x3.hpp
+	"type_mat.hpp"
+	"type_mat2x3.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat2x3.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat2x4.hpp
+	"type_mat.hpp"
+	"type_mat2x4.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat2x4.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat3x2.hpp
+	"type_mat.hpp"
+	"type_mat3x2.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat3x2.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat3x3.hpp
+	"type_mat.hpp"
+	"type_mat3x3.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat3x3.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat3x4.hpp
+	"type_mat.hpp"
+	"type_mat3x4.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat3x4.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat4x2.hpp
+	"type_mat.hpp"
+	"type_mat4x2.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat4x2.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat4x3.hpp
+	"type_mat.hpp"
+	"type_mat4x3.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat4x3.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat4x4.hpp
+	"type_mat.hpp"
+	"type_mat4x4.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/type_mat4x4.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_trigonometric.hpp
+	"func_trigonometric.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_trigonometric.inl
+	"_vectorize.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/_vectorize.hpp
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_exponential.hpp
+	"func_exponential.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_exponential.inl
+	"_vectorize.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_common.hpp
+	"_fixes.hpp"
+	"func_common.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_common.inl
+	"_vectorize.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_packing.hpp
+	"func_packing.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_packing.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_geometric.hpp
+	"func_geometric.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_geometric.inl
+	"_vectorize.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_matrix.hpp
+	"func_matrix.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_matrix.inl
+	"_vectorize.hpp"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_vector_relational.hpp
+	"_detail.hpp"
+	"func_vector_relational.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_vector_relational.inl
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_integer.hpp
+	"func_integer.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_integer.inl
+	"_vectorize.hpp"
+	<intrin.h>
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_noise.hpp
+	"func_noise.inl"
+
+1575311111 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/vendor/glm/glm/core/func_noise.inl
+
+1575573193 source:/home/eike/Desktop/Programmieren/breadboard/src/rendering/renderer.cpp
+	"renderer.h"
+	<2D/sprite_renderer.h>
+	<rendering/board_texture.h>
+
+1575569965 /home/eike/Desktop/Programmieren/breadboard/src/rendering/renderer.h
+	<breadboard.h>
+	<2D/sprite.h>
+	<2D/sprite_renderer.h>
+
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/engine/src/2D/sprite.h
+	<graphics/texture.h>
+	<glm/glm/glm.hpp>
+
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/graphics/texture.h
+	<core/shared_lib_class.h>
+	<core/buffer_layout.h>
+	<string>
+
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/core/buffer_layout.h
+	<core/types.h>
 	<vector>
 
-1575196732 source:d:\programmieren\cb workspace\breadboard\src\breadboard.cpp
-	"breadboard.h"
-	<iostream>
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/core/types.h
 
-1575142222 d:\programmieren\cb workspace\breadboard\src\breadboard.h
-	<component.h>
-	<contact_strip.h>
+1575569693 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/engine/src/2D/sprite_renderer.h
+	"2D/sprite.h"
+	"2D/animated_sprite.h"
+	<graphics/renderer.h>
+	<graphics/shader.h>
+	<graphics/vertex_buffer.h>
 
-1575128655 d:\programmieren\cb workspace\breadboard\src\contact_point.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/engine/src/2D/animated_sprite.h
+	<2D/animation.h>
+	<2D/sprite.h>
 
-1575127682 source:d:\programmieren\cb workspace\breadboard\src\contact_point.cpp
-	"contact_point.h"
-
-1575196722 d:\programmieren\cb workspace\breadboard\src\contact_strip.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/engine/src/2D/animation.h
+	<graphics/texture.h>
 	<vector>
 
-1575197623 source:d:\programmieren\cb workspace\breadboard\src\contact_strip.cpp
-	"contact_strip.h"
-	<component.h>
-	<iostream>
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/graphics/renderer.h
+	<core/shared_lib_class.h>
+	<graphics/shader.h>
+	<graphics/vertex_buffer.h>
 
-1575201299 source:d:\programmieren\cb workspace\breadboard\src\components\led.cpp
-	"led.h"
-	<iostream>
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/graphics/shader.h
+	<core/shared_lib_class.h>
+	<string>
+	<graphics/uniform.h>
+	<graphics/texture.h>
 
-1575197114 d:\programmieren\cb workspace\breadboard\src\components\led.h
-	<component.h>
-	<components/pin_status.h>
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/graphics/uniform.h
+	<core/shared_lib_class.h>
+	<core/types.h>
+	<core/buffer_layout.h>
+	<string>
 
-1575196645 source:d:\programmieren\cb workspace\breadboard\src\components\pin_status.cpp
-	"pin_status.h"
-
-1575196645 d:\programmieren\cb workspace\breadboard\src\components\pin_status.h
+1575311030 /home/eike/Desktop/Programmieren/breadboard/engine/undicht/core/include/graphics/vertex_buffer.h
+	<core/shared_lib_class.h>
+	<core/buffer_layout.h>
 	<vector>
 

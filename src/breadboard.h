@@ -29,7 +29,8 @@ namespace bread {
 
         public:
 
-            /** @param width and height describing the number of contacts in the main area */
+            /** @param width and height describing the number of contacts in the main area
+            * the board will be 2 rows of pins wider that the width ( power busses)*/
             void initialize(int width, int height);
 
             void getSize(int& width, int& height);

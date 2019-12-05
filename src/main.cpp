@@ -1,6 +1,7 @@
 #include <engine_control.h>
 #include <breadboard.h>
 #include <components/led.h>
+#include <rendering/renderer.h>
 
 using namespace bread;
 
@@ -11,7 +12,7 @@ int main() {
     {
 
         Breadboard board;
-        board.initialize(50, 10);
+        board.initialize(12, 50);
 
         LED red_led(1,0,0);
         LED green_led(0,1,0);
@@ -35,8 +36,13 @@ int main() {
         green_led.getStatus();
         blue_led.getStatus();
 
+        Renderer renderer;
+
         while(!window->shouldClose()) {
 
+            renderer.draw(board);
+
+            context->swapBuffers();
             window->update();
 
         }

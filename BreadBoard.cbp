@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="debug - windows">
-				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/debug - windows" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -28,7 +28,7 @@
 				</Linker>
 			</Target>
 			<Target title="debug - linux">
-				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/debug - linux" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -47,11 +47,10 @@
 					<Add library="dl" />
 					<Add directory="engine/undicht/core" />
 					<Add directory="engine/undicht/engine" />
-					<Add directory="." />
 				</Linker>
 			</Target>
 			<Target title="release - windows">
-				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/release - windows" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -72,7 +71,7 @@
 				</Linker>
 			</Target>
 			<Target title="release - linux">
-				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/release - linux" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -91,7 +90,6 @@
 					<Add library="dl" />
 					<Add directory="engine/undicht/core" />
 					<Add directory="engine/undicht/engine" />
-					<Add directory="." />
 				</Linker>
 			</Target>
 		</Build>
@@ -108,9 +106,14 @@
 		<Unit filename="src/engine_control.cpp" />
 		<Unit filename="src/engine_control.h" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/rendering/board_texture.cpp" />
+		<Unit filename="src/rendering/board_texture.h" />
+		<Unit filename="src/rendering/renderer.cpp" />
+		<Unit filename="src/rendering/renderer.h" />
+		<Unit filename="src/rendering/texture_generator.cpp" />
+		<Unit filename="src/rendering/texture_generator.h" />
 		<Extensions>
 			<code_completion />
-			<envvars />
 			<debugger />
 		</Extensions>
 	</Project>
