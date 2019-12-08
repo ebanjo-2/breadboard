@@ -1,8 +1,12 @@
 #include "renderer.h"
 #include <2D/sprite_renderer.h>
 #include <rendering/board_texture.h>
+#include <2D/physics/physics_math.h>
 
 namespace bread {
+
+    undicht::SpriteRenderer* Renderer::s_renderer = 0;
+
 
     Renderer::Renderer() {
         //ctor
@@ -12,49 +16,49 @@ namespace bread {
         //dtor
     }
 
-    undicht::Sprite* Renderer::getSprite(const Breadboard& board) {
+    void Renderer::initialize() {
 
-        // checking if the objects sprite is already stored
-        for(int i = 0; i < m_objects.size(); i++) {
-            if(m_objects.at(i) == (void*)&board) {
-                return &m_sprites.at(i);
-            }
-        }
+        s_renderer = new undicht::SpriteRenderer();
 
-        // or creating a new sprite
-        char* pixels;
-        int width, height, byte_size;
-        BoardTexture::genColorTexture(pixels, board, width, height, byte_size);
+    }
 
-        undicht::core::BufferLayout pixel_layout({undicht::core::UND_VEC3F});
+    void Renderer::terminate() {
 
-        m_sprites.emplace_back(undicht::Sprite());
-        m_sprites.back().setPixelFormat(pixel_layout);
-        m_sprites.back().setSize(width, height);
-        m_sprites.back().setData(pixels, byte_size);
+        delete s_renderer;
+        s_renderer = 0;
 
-        BoardTexture::freePixels(pixels);
-
-        // unstretching the sprite
-        if(board.m_width > board.m_height) {
-            m_sprites.back().setScale(glm::vec2(1, float(board.m_height) / board.m_width));
-        } else {
-            m_sprites.back().setScale(glm::vec2(float(board.m_width) / board.m_height, 1));
-        }
-
-        m_objects.push_back((void*)&board);
-
-        return &m_sprites.back();
     }
 
 
-    void Renderer::draw(const Breadboard& board) {
+    void Renderer::draw(Breadboard& board) {
+
+        s_renderer->draw(board.getSprite());
+
+        std::vector<Component*> components = board.getComponents();
+        std::cout << "drawing " << components.size() << " components " << "\n";
+        for(Component* c : components) {
+            draw(board, *c, &c->getSprite());
+        }
+
+    }
 
 
-        undicht::Sprite* board_sprite = getSprite(board);
+    void Renderer::draw(Breadboard& board, Component& component, undicht::Sprite* sprite) {
+        /// draws the component
 
+        // calculating the position of the first pin
+        int pixel_pos_x, pixel_pos_y;
+        BoardTexture::getPinPosition(board, component, 0, pixel_pos_x, pixel_pos_y);
+        glm::vec2 position(float(pixel_pos_x) / board.m_texture_width, float(pixel_pos_y) / board.m_texture_height);
+        position = position * 2.0f - 1.0f; // to (opengl screen) coordinates
 
-        m_renderer.draw(*board_sprite);
+        sprite->setPosition(glm::vec3(position, 0.0f));
+
+        std::cout << "pixel position: " << pixel_pos_x << " " << pixel_pos_y << "\n";
+        std::cout << "position: " << position.x << " " << position.y << "\n";
+        std::cout << "board texture size: " << board.m_texture_width << " " << board.m_texture_height << "\n";
+
+        s_renderer->draw(*sprite);
 
     }
 

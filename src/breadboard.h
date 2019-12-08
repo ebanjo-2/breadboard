@@ -3,6 +3,7 @@
 
 #include <component.h>
 #include <contact_strip.h>
+#include <2D/sprite.h>
 
 namespace bread {
 
@@ -15,10 +16,16 @@ namespace bread {
             int m_width = 0;
             int m_height = 0;
 
+            int m_texture_width = 0;
+            int m_texture_height = 0;
+
             ContactStrip m_positive_power_bus;
             ContactStrip m_negative_power_bus;
 
             std::vector<ContactStrip> m_terminal_strips;
+
+            undicht::Sprite m_sprite;
+            bool m_update_sprite = true;
 
             enum ContactArea {
 
@@ -35,6 +42,9 @@ namespace bread {
 
             void getSize(int& width, int& height);
 
+            /** @return all components connected to the board */
+            std::vector<Component*> getComponents();
+
         public:
 
             /** to be used for setting pins into the power busses */
@@ -44,6 +54,14 @@ namespace bread {
             void addPin(Component& c, unsigned int pin_id, const ContactArea& area, unsigned int strip_pos, unsigned int row, bool top_half);
 
         public:
+            // functions to draw the component
+
+            virtual undicht::Sprite& getSprite();
+
+            void updateSprite();
+
+        public:
+
 
             /// negative power bus will be ground
             void setPower(float voltage);

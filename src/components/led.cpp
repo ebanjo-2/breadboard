@@ -1,5 +1,6 @@
 #include "led.h"
 #include <iostream>
+#include <rendering/texture_generator.h>
 
 namespace bread {
 
@@ -54,15 +55,34 @@ namespace bread {
 
             if(m_n_pin.m_resistance != -1) { // connected
 
-                std::cout << "LED ON: " << m_r << " " << m_g << " " << m_b << "\n";
+                //std::cout << "LED ON: " << m_r << " " << m_g << " " << m_b << "\n";
                 return 1;
             }
 
         }
 
-        std::cout << "LED OFF: " << m_r << " " << m_g << " " << m_b << "\n";
+        //std::cout << "LED OFF: " << m_r << " " << m_g << " " << m_b << "\n";
 
         return 0;
+    }
+
+    undicht::Sprite& LED::getSprite() {
+
+        // updating m_sprite
+        if(m_update_sprite) {
+            undicht::core::BufferLayout pixel_layout({undicht::core::UND_VEC3F});
+            m_sprite.setPixelFormat(pixel_layout);
+            m_sprite.setSize(1,1); // texture size
+            if(getStatus()) {
+                m_sprite.setData(TextureGenerator::to24BitColor(glm::vec3(m_r, m_g, m_b)), 3);
+            } else {
+                m_sprite.setData(TextureGenerator::to24BitColor(0.3f * glm::vec3(m_r, m_g, m_b)), 3);
+            }
+            m_sprite.setScale(glm::vec2(0.01,0.01)); // sprite scale
+            m_update_sprite = false;
+        }
+
+        return m_sprite;
     }
 
 } // bread

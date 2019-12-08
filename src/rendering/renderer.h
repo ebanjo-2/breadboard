@@ -10,16 +10,19 @@ namespace bread {
     class Renderer {
         private:
 
-            std::vector<undicht::Sprite> m_sprites;
-            std::vector<void*> m_objects; // the objects for which the sprites are stored
+            static undicht::SpriteRenderer* s_renderer;
 
-            undicht::SpriteRenderer m_renderer;
+            static undicht::Sprite* getSprite(const Breadboard& board);
 
-            undicht::Sprite* getSprite(const Breadboard& board);
+            /// draws the component
+            static void draw(Breadboard& board, Component& component, undicht::Sprite* sprite);
 
         public:
 
-            void draw(const Breadboard& board);
+            static void initialize();
+            static void terminate();
+
+            static void draw(Breadboard& board);
 
 
             Renderer();

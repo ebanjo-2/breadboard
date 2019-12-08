@@ -14,12 +14,17 @@ namespace bread {
             PinStatus m_p_pin; // 0
             PinStatus m_n_pin; // 1
 
+            undicht::Sprite m_sprite;
+            bool m_update_sprite = true;
+
             float m_r = 0, m_g = 0, m_b = 0;
 
             virtual void setVoltage(unsigned int pin_id, float voltage, float resistance);
 
             /** @return 1 if the led is shining, 0 if not */
             int getStatus();
+
+            virtual undicht::Sprite& getSprite();
 
             LED();
             LED(float r, float g, float b);

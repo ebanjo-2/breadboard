@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="debug - windows">
-				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/debug - windows" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -21,14 +21,14 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="core" />
-					<Add library="engine" />
 					<Add directory="engine/undicht/core" />
 					<Add directory="engine/undicht/engine" />
+					<Add library="core" />
+					<Add library="engine" />
 				</Linker>
 			</Target>
 			<Target title="debug - linux">
-				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/debug - linux" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -42,15 +42,16 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add directory="engine/undicht/core" />
+					<Add directory="engine/undicht/engine" />
+					<Add directory="." />
 					<Add library="core" />
 					<Add library="engine" />
 					<Add library="dl" />
-					<Add directory="engine/undicht/core" />
-					<Add directory="engine/undicht/engine" />
 				</Linker>
 			</Target>
 			<Target title="release - windows">
-				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/release - windows" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -64,14 +65,14 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="core" />
-					<Add library="engine" />
 					<Add directory="engine/undicht/core" />
 					<Add directory="engine/undicht/engine" />
+					<Add library="core" />
+					<Add library="engine" />
 				</Linker>
 			</Target>
 			<Target title="release - linux">
-				<Option output="BreadBoard" prefix_auto="0" extension_auto="0" />
+				<Option output="BreadBoard.exe" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/release - linux" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -85,36 +86,55 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add directory="engine/undicht/core" />
+					<Add directory="engine/undicht/engine" />
+					<Add directory="." />
 					<Add library="core" />
 					<Add library="engine" />
 					<Add library="dl" />
-					<Add directory="engine/undicht/core" />
-					<Add directory="engine/undicht/engine" />
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="src/breadboard.cpp" />
-		<Unit filename="src/breadboard.h" />
-		<Unit filename="src/component.cpp" />
-		<Unit filename="src/component.h" />
-		<Unit filename="src/components/led.cpp" />
-		<Unit filename="src/components/led.h" />
-		<Unit filename="src/components/pin_status.cpp" />
-		<Unit filename="src/components/pin_status.h" />
-		<Unit filename="src/contact_strip.cpp" />
-		<Unit filename="src/contact_strip.h" />
-		<Unit filename="src/engine_control.cpp" />
-		<Unit filename="src/engine_control.h" />
-		<Unit filename="src/main.cpp" />
-		<Unit filename="src/rendering/board_texture.cpp" />
-		<Unit filename="src/rendering/board_texture.h" />
-		<Unit filename="src/rendering/renderer.cpp" />
-		<Unit filename="src/rendering/renderer.h" />
-		<Unit filename="src/rendering/texture_generator.cpp" />
-		<Unit filename="src/rendering/texture_generator.h" />
+		<Unit filename="src/breadboard.cpp">
+		</Unit>
+		<Unit filename="src/breadboard.h">
+		</Unit>
+		<Unit filename="src/component.cpp">
+		</Unit>
+		<Unit filename="src/component.h">
+		</Unit>
+		<Unit filename="src/contact_strip.cpp">
+		</Unit>
+		<Unit filename="src/contact_strip.h">
+		</Unit>
+		<Unit filename="src/engine_control.cpp">
+		</Unit>
+		<Unit filename="src/engine_control.h">
+		</Unit>
+		<Unit filename="src/main.cpp">
+		</Unit>
+		<Unit filename="src/components/led.cpp">
+		</Unit>
+		<Unit filename="src/components/led.h">
+		</Unit>
+		<Unit filename="src/components/pin_status.cpp">
+		</Unit>
+		<Unit filename="src/components/pin_status.h">
+		</Unit>
+		<Unit filename="src/rendering/board_texture.cpp">
+		</Unit>
+		<Unit filename="src/rendering/board_texture.h">
+		</Unit>
+		<Unit filename="src/rendering/renderer.cpp">
+		</Unit>
+		<Unit filename="src/rendering/renderer.h">
+		</Unit>
+		<Unit filename="src/rendering/texture_generator.cpp">
+		</Unit>
+		<Unit filename="src/rendering/texture_generator.h">
+		</Unit>
 		<Extensions>
-			<code_completion />
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
+

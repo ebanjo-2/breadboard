@@ -14,6 +14,9 @@ namespace bread {
 
             static void addPin(char* texture, int pos_x, int pos_y, int texture_width, int pin_size, char* color);
 
+            /** stores the position of the components pin on the board texture in the position parameters */
+            static void getPinPosition(const Breadboard& board, const Component& component, int pin_id, int& pos_x, int& pos_y);
+
             BoardTexture();
             virtual ~BoardTexture();
 

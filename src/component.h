@@ -2,6 +2,7 @@
 #define COMPONENT_H
 
 #include <vector>
+#include <2D/sprite.h>
 
 
 namespace bread {
@@ -25,6 +26,11 @@ namespace bread {
             virtual void setPinCount(unsigned int num);
 
             virtual void setConnection(ContactStrip* contact, int pin_id);
+
+        public:
+            // functions to draw the component
+
+            virtual undicht::Sprite& getSprite();
 
         protected:
 

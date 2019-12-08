@@ -12,7 +12,7 @@ int main() {
     {
 
         Breadboard board;
-        board.initialize(12, 50);
+        board.initialize(6, 6);
 
         LED red_led(1,0,0);
         LED green_led(0,1,0);
@@ -20,7 +20,7 @@ int main() {
 
         // connecting the red led
         board.addPin(red_led, 0, Breadboard::PowerBusPositive, 0);
-        board.addPin(red_led, 1, Breadboard::ContactStripArea, 0, 0, true);
+        board.addPin(red_led, 1, Breadboard::ContactStripArea, 0, 3, true);
 
         // connecting the green led
         board.addPin(green_led, 0, Breadboard::ContactStripArea, 1, 0, true);
@@ -36,16 +36,18 @@ int main() {
         green_led.getStatus();
         blue_led.getStatus();
 
-        Renderer renderer;
+        Renderer::initialize();
 
         while(!window->shouldClose()) {
 
-            renderer.draw(board);
+            Renderer::draw(board);
 
             context->swapBuffers();
             window->update();
 
         }
+
+        Renderer::terminate();
 
 
     }

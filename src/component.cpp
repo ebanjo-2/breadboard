@@ -41,6 +41,10 @@ namespace bread {
 
     }
 
+    undicht::Sprite& Component::getSprite() {
+        // to be implemented by derived classes
+    }
+
 
     void Component::outputVoltage(unsigned int pin_id, float voltage, float resistance) {
 

@@ -1,5 +1,6 @@
 #include "breadboard.h"
 #include <iostream>
+#include <rendering/board_texture.h>
 
 namespace bread {
 
@@ -37,6 +38,45 @@ namespace bread {
         height = m_height;
     }
 
+
+    /** @return all components connected to the board */
+    std::vector<Component*> Breadboard::getComponents() {
+
+        std::vector<Component*> components;
+
+        // for the power busses
+        for(int i = 0; i < m_positive_power_bus.m_components.size(); i++) {
+
+            if(m_positive_power_bus.m_components.at(i) && (!m_positive_power_bus.m_pin_ids.at(i))) {
+                // pin 0 of some component
+                components.push_back(m_positive_power_bus.m_components.at(i));
+            }
+        }
+
+        for(int i = 0; i < m_negative_power_bus.m_components.size(); i++) {
+
+            if(m_negative_power_bus.m_components.at(i) && (!m_negative_power_bus.m_pin_ids.at(i))) {
+                // pin 0 of some component
+                components.push_back(m_negative_power_bus.m_components.at(i));
+            }
+        }
+
+
+        // for the terminal area
+        for(ContactStrip& contact : m_terminal_strips) {
+
+            for(int i = 0; i < contact.m_components.size(); i++) {
+
+                if(contact.m_components.at(i) && (!contact.m_pin_ids.at(i))) {
+                    // pin 0 of some component
+                    components.push_back(contact.m_components.at(i));
+                }
+            }
+        }
+
+        return components;
+    }
+
     void Breadboard::addPin(Component& c, unsigned int pin_id, const ContactArea& area, unsigned int strip_pos) {
         /** to be used for setting pins into the power busses */
 
@@ -71,6 +111,39 @@ namespace bread {
 
     }
 
+    undicht::Sprite& Breadboard::getSprite() {
+
+        if(m_update_sprite) {
+            updateSprite();
+            m_update_sprite = false;
+        }
+
+        return m_sprite;
+    }
+
+
+    void Breadboard::updateSprite() {
+
+        char* pixels;
+        int  byte_size; // size of the texture
+        BoardTexture::genColorTexture(pixels, *this, m_texture_width, m_texture_height, byte_size);
+
+        undicht::core::BufferLayout pixel_layout({undicht::core::UND_VEC3F});
+
+        m_sprite.setPixelFormat(pixel_layout);
+        m_sprite.setSize(m_texture_width, m_texture_height);
+        m_sprite.setData(pixels, byte_size);
+
+        BoardTexture::freePixels(pixels);
+
+        // unstretching the sprite
+        if(m_width > m_height) {
+            m_sprite.setScale(glm::vec2(1, float(m_height) / m_width));
+        } else {
+            m_sprite.setScale(glm::vec2(float(m_width) / m_height, 1));
+        }
+
+    }
 
     void Breadboard::setPower(float voltage) {
         /// negative power bus will be ground
